@@ -8,7 +8,6 @@ import { run } from '.';
 jest.mock('@actions/core');
 jest.mock('@actions/exec');
 jest.mock('@actions/tool-cache');
-jest.mock('child_process');
 jest.mock('os');
 
 const mockedCore = jest.mocked(core);
@@ -37,7 +36,7 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
         case 'name':
           return cliName;
         default:
-          return '';
+          throw Error(`Invalid input: ${input}`);
       }
     });
   });
@@ -53,9 +52,7 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
     await run();
 
     expect(mockedTc.downloadTool).toHaveBeenCalledWith(
-      expect.stringContaining(
-        `https://github.com/ollama/ollama/releases/download/v${cliVersion}/ollama-`,
-      ),
+      expect.stringContaining('https://ollama.com/download/ollama-'),
     );
 
     expect(extract).toHaveBeenCalledWith(pathToTarball);
