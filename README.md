@@ -1,23 +1,23 @@
-# github-actions-setup-cli-template
+# setup-ollama
 
-[![action](https://badgen.net/badge/github/github-actions-setup-cli-template?icon&label)](https://github.com/marketplace/actions/github-actions-setup-cli-template)
-[![version](https://badgen.net/github/release/remarkablemark/github-actions-setup-cli-template)](https://github.com/remarkablemark/github-actions-setup-cli-template/releases)
-[![build](https://github.com/remarkablemark/github-actions-setup-cli-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/github-actions-setup-cli-template/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/remarkablemark/github-actions-setup-cli-template/graph/badge.svg?token=PGPJ2Q8HUO)](https://codecov.io/gh/remarkablemark/github-actions-setup-cli-template)
+[![action](https://badgen.net/badge/github/setup-ollama?icon&label)](https://github.com/marketplace/actions/setup-ollama)
+[![version](https://badgen.net/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
+[![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=PGPJ2Q8HUO)](https://codecov.io/gh/ai-action/setup-ollama)
 
-⚙️ GitHub Actions setup CLI template. Inspired by [github-developer/example-setup-gh](https://github.com/github-developer/example-setup-gh). Template from [remarkablemark/github-actions-typescript-template](https://github.com/remarkablemark/github-actions-typescript-template).
+🦙 Set up GitHub Actions workflow with ollama
 
 ## Quick Start
 
 ```yaml
-name: github-actions-setup-cli-template
+name: setup-ollama
 on: push
 jobs:
-  github-actions-setup-cli-template:
+  setup-ollama:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup github-actions-setup-cli-template
-        uses: remarkablemark/github-actions-setup-cli-template@v1
+      - name: Setup setup-ollama
+        uses: ai-action/setup-ollama@v1
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ See [action.yml](action.yml)
 **Basic:**
 
 ```yaml
-- uses: remarkablemark/github-actions-setup-cli-template@v1
+- uses: ai-action/setup-ollama@v1
 ```
 
 ## Inputs
@@ -37,7 +37,7 @@ See [action.yml](action.yml)
 **Optional**: The CLI [version](https://github.com/cli/cli/releases). Defaults to [`2.49.0`](https://github.com/cli/cli/releases/tag/v2.49.0):
 
 ```yaml
-- uses: remarkablemark/github-actions-setup-cli-template@v1
+- uses: ai-action/setup-ollama@v1
   with:
     cli-version: 2.49.0
 ```
@@ -47,7 +47,7 @@ See [action.yml](action.yml)
 **Optional**: The CLI name. Defaults to `gh`:
 
 ```yaml
-- uses: remarkablemark/github-actions-setup-cli-template@v1
+- uses: ai-action/setup-ollama@v1
   with:
     cli-name: gh
 ```
