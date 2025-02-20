@@ -14,5 +14,5 @@ runs:
   using: node20
   main: dist/index.js
 branding:
-  icon: activity
+  icon: terminal
   color: gray-dark
