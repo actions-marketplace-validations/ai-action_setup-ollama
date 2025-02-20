@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ai-action/setup-ollama/compare/v1.0.0...v1.0.1) (2025-02-20)
+
+
+### Bug Fixes
+
+* **action:** replace download link ([5748a42](https://github.com/ai-action/setup-ollama/commit/5748a4200b3ccfe31f116bf0fb1d3d742c0729ee))
+
 ## 1.0.0 (2025-02-20)
 
 
