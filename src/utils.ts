@@ -68,7 +68,7 @@ export function getDownloadObject(version: string) {
 
   return {
     binaryDirectory: platform === 'linux' ? 'bin' : '',
-    url: `https://github.com/ollama/ollama/releases/download/v${version}/${filename}${extension}`,
+    url: `https://ollama.com/download/${filename}${extension}?version=${version}`,
   };
 }
 

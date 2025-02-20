@@ -28,7 +28,7 @@ export async function run() {
       const pathToTarball = await downloadTool(download.url);
 
       // Extract the tarball/zipball onto the host runner
-      const extract = download.url.endsWith('.zip') ? extractZip : extractTar;
+      const extract = download.url.includes('.zip') ? extractZip : extractTar;
       const extractDirectory = await extract(pathToTarball);
 
       // Get the binary
