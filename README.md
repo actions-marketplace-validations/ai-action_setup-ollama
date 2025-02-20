@@ -5,7 +5,7 @@
 [![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=PGPJ2Q8HUO)](https://codecov.io/gh/ai-action/setup-ollama)
 
-🦙 Set up GitHub Actions workflow with ollama
+🦙 Set up GitHub Actions workflow with [ollama](https://github.com/ollama/ollama).
 
 ## Quick Start
 
@@ -51,10 +51,6 @@ See [action.yml](action.yml)
   with:
     cli-name: gh
 ```
-
-## Contributions
-
-Contributions are welcome!
 
 ## License
 
