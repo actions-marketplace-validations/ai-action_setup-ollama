@@ -5,7 +5,7 @@
 [![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=PGPJ2Q8HUO)](https://codecov.io/gh/ai-action/setup-ollama)
 
-🦙 Set up GitHub Actions workflow with [ollama](https://github.com/ollama/ollama).
+🦙 Set up GitHub Actions workflow with [Ollama](https://github.com/ollama/ollama).
 
 ## Quick Start
 
@@ -13,11 +13,14 @@
 name: setup-ollama
 on: push
 jobs:
-  setup-ollama:
+  prompt:
     runs-on: ubuntu-latest
     steps:
       - name: Setup setup-ollama
         uses: ai-action/setup-ollama@v1
+
+      - name: Run LLM
+        run: ollama run llama3.2 'Explain the basics of machine learning.'
 ```
 
 ## Usage
@@ -32,24 +35,24 @@ See [action.yml](action.yml)
 
 ## Inputs
 
-### `cli-version`
+### `version`
 
-**Optional**: The CLI [version](https://github.com/cli/cli/releases). Defaults to [`2.49.0`](https://github.com/cli/cli/releases/tag/v2.49.0):
+**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.5.11`](https://github.com/ollama/ollama/releases/tag/v0.5.11):
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
   with:
-    cli-version: 2.49.0
+    version: 0.5.11
 ```
 
-### `cli-name`
+### `name`
 
-**Optional**: The CLI name. Defaults to `gh`:
+**Optional**: The CLI name. Defaults to `ollama`:
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
   with:
-    cli-name: gh
+    name: ollama
 ```
 
 ## License

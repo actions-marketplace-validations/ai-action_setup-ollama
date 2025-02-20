@@ -1,15 +1,15 @@
 name: setup-ollama
-description: GitHub Actions setup CLI template
+description: Set up GitHub Actions workflow with ollama
 author: remarkablemark
 inputs:
-  cli-version:
+  version:
     description: CLI version
     required: false
-    default: 2.49.0
-  cli-name:
+    default: 0.5.11
+  name:
     description: CLI name
     required: false
-    default: gh
+    default: ollama
 runs:
   using: node20
   main: dist/index.js
