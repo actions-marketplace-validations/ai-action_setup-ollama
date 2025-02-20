@@ -6,7 +6,7 @@ jest.mock('os');
 const mockedOs = jest.mocked(os);
 
 const platforms = ['darwin', 'linux', 'win32'] as const;
-const architectures = ['arm', 'x32', 'x64'] as const;
+const architectures = ['arm64', 'x64'] as const;
 
 const table = platforms.reduce(
   (testSuites, os) => [
@@ -18,7 +18,7 @@ const table = platforms.reduce(
 
 describe('getDownloadObject', () => {
   describe.each(table)('when OS is %p and arch is %p', (os, arch) => {
-    const version = '2.27.0';
+    const version = '0.5.11';
 
     beforeEach(() => {
       jest.resetAllMocks();

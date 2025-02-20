@@ -8,6 +8,7 @@ import { run } from '.';
 jest.mock('@actions/core');
 jest.mock('@actions/exec');
 jest.mock('@actions/tool-cache');
+jest.mock('child_process');
 jest.mock('os');
 
 const mockedCore = jest.mocked(core);
@@ -31,15 +32,18 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
 
     mockedCore.getInput.mockImplementation((input) => {
       switch (input) {
-        case 'cli-version':
+        case 'version':
           return cliVersion;
-        case 'cli-name':
+        case 'name':
           return cliName;
         default:
           return '';
       }
     });
   });
+
+  const binPath = os === 'linux' ? `${pathToCLI}/bin` : pathToCLI;
+  const cliPath = `${binPath}/${cliName}`;
 
   it('downloads, extracts, and adds CLI to PATH', async () => {
     mockedTc.downloadTool.mockResolvedValueOnce(pathToTarball);
@@ -50,27 +54,25 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
 
     expect(mockedTc.downloadTool).toHaveBeenCalledWith(
       expect.stringContaining(
-        `https://github.com/cli/cli/releases/download/v${cliVersion}/gh_${cliVersion}_`,
+        `https://github.com/ollama/ollama/releases/download/v${cliVersion}/ollama-`,
       ),
     );
 
     expect(extract).toHaveBeenCalledWith(pathToTarball);
 
     expect(mockedExec.exec).toHaveBeenCalledWith('mv', [
-      expect.stringContaining(`/bin/${cliName}`),
-      expect.stringContaining(`/bin/${cliName}`),
+      `${binPath}/ollama`,
+      cliPath,
     ]);
 
     expect(mockedTc.cacheFile).toHaveBeenCalledWith(
-      expect.stringContaining(`/bin/${cliName}`),
+      cliPath,
       cliName,
       cliName,
       cliVersion,
     );
 
-    expect(mockedCore.addPath).toHaveBeenCalledWith(
-      expect.stringContaining(pathToCLI),
-    );
+    expect(mockedCore.addPath).toHaveBeenCalledWith(binPath);
   });
 });
 

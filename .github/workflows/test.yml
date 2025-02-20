@@ -32,13 +32,22 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
+      - name: Run action
+        uses: ./
+
+      - name: Start Ollama
+        run: ollama serve &
+
+      - name: Get version
+        run: ollama --version
+
   # action should work on a clean machine without building
   integration:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        version: [2.27.0]
+        version: [0.5.10]
 
     steps:
       - name: Checkout repository
@@ -47,21 +56,26 @@ jobs:
       - name: Run action
         uses: ./
         with:
-          cli-version: ${{ matrix.version }}
-          cli-name: gh
+          version: ${{ matrix.version }}
+          name: ollama-cli
+
+      - name: Start Ollama
+        shell: bash
+        run: ollama-cli serve &
 
       - name: Locate binary
-        run: command -v gh
+        run: command -v ollama-cli
 
       - name: Check version
         shell: bash
         run: |
-          gh --version &> CLI_VERSION
+          ollama-cli --version &> CLI_VERSION
           if [[ $(cat CLI_VERSION) != *'${{ matrix.version }}'* ]]; then
             echo 'Version does not match. See version below:'
-            gh --version
+            ollama-cli --version
             exit 1
           fi
 
-      - name: Show help
-        run: gh --help
+      - name: Run LLM
+        if: matrix.os != 'macos-latest'
+        run: ollama-cli run llama3.2 'Explain the basics of machine learning.'

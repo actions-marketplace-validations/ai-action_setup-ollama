@@ -14,8 +14,8 @@ import { getBinaryPath, getDownloadObject } from './utils';
 export async function run() {
   try {
     // Get the version and name of the tool to be installed
-    const cliVersion = getInput('cli-version');
-    const cliName = getInput('cli-name');
+    const cliVersion = getInput('version');
+    const cliName = getInput('name');
     const toolName = cliName;
 
     // Find previously cached directory (if applicable)
@@ -39,8 +39,11 @@ export async function run() {
       binaryPath = getBinaryPath(binaryDirectory, cliName);
 
       // Rename the binary
-      if (cliName !== 'gh') {
-        await exec('mv', [getBinaryPath(binaryDirectory, cliName), binaryPath]);
+      if (cliName !== 'ollama') {
+        await exec('mv', [
+          getBinaryPath(binaryDirectory, 'ollama'),
+          binaryPath,
+        ]);
       }
     }
 
