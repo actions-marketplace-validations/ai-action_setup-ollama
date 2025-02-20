@@ -31,13 +31,13 @@ jobs:
 
 ## Usage
 
-See [action.yml](action.yml)
-
-**Basic:**
+Install Ollama CLI:
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
 ```
+
+See [action.yml](action.yml)
 
 ## Inputs
 
