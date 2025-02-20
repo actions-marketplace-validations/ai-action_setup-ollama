@@ -7,7 +7,6 @@ import {
   extractZip,
   find,
 } from '@actions/tool-cache';
-import { spawn } from 'child_process';
 import path from 'path';
 
 import { getBinaryPath, getDownloadObject } from './utils';
@@ -47,9 +46,6 @@ export async function run() {
         ]);
       }
     }
-
-    // Run Ollama in the background
-    spawn(binaryPath, ['serve'], { detached: true }).unref();
 
     // Expose the tool by adding it to the PATH
     addPath(path.dirname(binaryPath));

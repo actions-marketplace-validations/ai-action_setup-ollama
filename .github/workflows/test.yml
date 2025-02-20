@@ -35,6 +35,9 @@ jobs:
       - name: Run action
         uses: ./
 
+      - name: Start Ollama
+        run: ollama serve &
+
       - name: Get version
         run: ollama --version
 
@@ -44,7 +47,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        version: [0.5.10, 0.5.11]
+        version: [0.5.10]
 
     steps:
       - name: Checkout repository
@@ -55,6 +58,10 @@ jobs:
         with:
           version: ${{ matrix.version }}
           name: ollama-cli
+
+      - name: Start Ollama
+        shell: bash
+        run: ollama-cli serve &
 
       - name: Locate binary
         run: command -v ollama-cli

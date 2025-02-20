@@ -10,14 +10,17 @@
 ## Quick Start
 
 ```yaml
-name: setup-ollama
+name: ollama
 on: push
 jobs:
-  prompt:
+  ollama:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup setup-ollama
+      - name: Setup Ollama
         uses: ai-action/setup-ollama@v1
+
+      - name: Start Ollama
+        run: ollama serve &
 
       - name: Run LLM
         run: ollama run llama3.2 'Explain the basics of machine learning.'
