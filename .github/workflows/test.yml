@@ -77,4 +77,5 @@ jobs:
           fi
 
       - name: Run LLM
+        if: matrix.os != 'macos-latest'
         run: ollama-cli run llama3.2 'Explain the basics of machine learning.'

@@ -26,6 +26,9 @@ jobs:
         run: ollama run llama3.2 'Explain the basics of machine learning.'
 ```
 
+> [!NOTE]
+> Don't use runner `macos-latest` since it doesn't work at the moment.
+
 ## Usage
 
 See [action.yml](action.yml)
