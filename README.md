@@ -3,7 +3,7 @@
 [![action](https://badgen.net/badge/github/setup-ollama?icon&label)](https://github.com/marketplace/actions/setup-ollama)
 [![version](https://badgen.net/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
 [![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=PGPJ2Q8HUO)](https://codecov.io/gh/ai-action/setup-ollama)
+[![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=AB3XFS8HYL)](https://codecov.io/gh/ai-action/setup-ollama)
 
 🦙 Set up GitHub Actions workflow with [Ollama](https://github.com/ollama/ollama).
 
