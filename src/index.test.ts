@@ -1,6 +1,7 @@
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
 import * as tc from '@actions/tool-cache';
+import { type ChildProcess, spawn } from 'child_process';
 import os from 'os';
 
 import { run } from '.';
@@ -8,12 +9,14 @@ import { run } from '.';
 jest.mock('@actions/core');
 jest.mock('@actions/exec');
 jest.mock('@actions/tool-cache');
+jest.mock('child_process');
 jest.mock('os');
 
 const mockedCore = jest.mocked(core);
 const mockedExec = jest.mocked(exec);
-const mockedTc = jest.mocked(tc);
 const mockedOs = jest.mocked(os);
+const mockedSpawn = jest.mocked(spawn);
+const mockedTc = jest.mocked(tc);
 
 beforeEach(() => {
   jest.resetAllMocks();
@@ -48,6 +51,8 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
     mockedTc.downloadTool.mockResolvedValueOnce(pathToTarball);
     const extract = os === 'win32' ? mockedTc.extractZip : mockedTc.extractTar;
     extract.mockResolvedValueOnce(pathToCLI);
+    const unref = jest.fn();
+    mockedSpawn.mockReturnValueOnce({ unref } as unknown as ChildProcess);
 
     await run();
 
@@ -70,6 +75,12 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
     );
 
     expect(mockedCore.addPath).toHaveBeenCalledWith(binPath);
+
+    expect(mockedSpawn).toHaveBeenCalledWith(cliName, ['serve'], {
+      detached: true,
+      stdio: 'ignore',
+    });
+    expect(unref).toHaveBeenCalledTimes(1);
   });
 });
 
