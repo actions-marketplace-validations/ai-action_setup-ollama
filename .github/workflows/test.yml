@@ -38,9 +38,6 @@ jobs:
       - name: Run action
         uses: ./
 
-      - name: Start Ollama
-        run: ollama serve &
-
       - name: Get version
         run: ollama --version
 
@@ -61,10 +58,6 @@ jobs:
         with:
           version: ${{ matrix.version }}
           name: ollama-cli
-
-      - name: Start Ollama
-        shell: bash
-        run: ollama-cli serve &
 
       - name: Locate binary
         run: command -v ollama-cli

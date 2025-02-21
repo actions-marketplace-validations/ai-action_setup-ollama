@@ -19,9 +19,6 @@ jobs:
       - name: Setup Ollama
         uses: ai-action/setup-ollama@v1
 
-      - name: Start Ollama
-        run: ollama serve &
-
       - name: Run LLM
         run: ollama run llama3.2 'Explain the basics of machine learning.'
 ```
@@ -31,13 +28,13 @@ jobs:
 
 ## Usage
 
-Install Ollama CLI:
+Set up Ollama CLI and start server:
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
 ```
 
-See [action.yml](action.yml)
+See [action.yml](action.yml).
 
 ## Inputs
 
