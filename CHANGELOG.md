@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ai-action/setup-ollama/compare/v1.0.1...v1.1.0) (2025-02-21)
+
+
+### Features
+
+* **index:** start the ollama server in the background ([d320a63](https://github.com/ai-action/setup-ollama/commit/d320a6333b086e124155abcc2501ad849fa005e3))
+
 ## [1.0.1](https://github.com/ai-action/setup-ollama/compare/v1.0.0...v1.0.1) (2025-02-20)
 
 
