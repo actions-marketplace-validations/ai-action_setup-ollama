@@ -73,4 +73,4 @@ jobs:
           fi
 
       - name: Run LLM
-        run: ollama-cli run llama3.2 'Explain the basics of machine learning.'
+        run: ollama-cli run tinyllama 'Explain the basics of machine learning.'
