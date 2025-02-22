@@ -23,9 +23,6 @@ jobs:
         run: ollama run llama3.2 'Explain the basics of machine learning.'
 ```
 
-> [!NOTE]
-> Don't use runner `macos-latest` since it doesn't work at the moment.
-
 ## Usage
 
 Set up Ollama CLI and start server:
