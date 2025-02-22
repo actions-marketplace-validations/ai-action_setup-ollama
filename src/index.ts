@@ -12,11 +12,14 @@ import path from 'path';
 
 import { getBinaryPath, getDownloadObject } from './utils';
 
+const DEFAULT_VERSION = '0.5.11';
+const DEFAULT_NAME = 'ollama';
+
 export async function run() {
   try {
     // Get the version and name of the tool to be installed
-    const cliVersion = getInput('version');
-    const cliName = getInput('name');
+    const cliVersion = getInput('version') || DEFAULT_VERSION;
+    const cliName = getInput('name') || DEFAULT_NAME;
     const toolName = cliName;
 
     // Find previously cached directory (if applicable)
@@ -40,9 +43,9 @@ export async function run() {
       binaryPath = getBinaryPath(binaryDirectory, cliName);
 
       // Rename the binary
-      if (cliName !== 'ollama') {
+      if (cliName !== DEFAULT_NAME) {
         await exec('mv', [
-          getBinaryPath(binaryDirectory, 'ollama'),
+          getBinaryPath(binaryDirectory, DEFAULT_NAME),
           binaryPath,
         ]);
       }
