@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ai-action/setup-ollama/compare/v1.1.0...v1.1.1) (2025-02-22)
+
+
+### Bug Fixes
+
+* **index:** set default cli name and version if empty string ([2ce39b5](https://github.com/ai-action/setup-ollama/commit/2ce39b509814cd21bab6f704af4103769f2b977b))
+
 ## [1.1.0](https://github.com/ai-action/setup-ollama/compare/v1.0.1...v1.1.0) (2025-02-21)
 
 
