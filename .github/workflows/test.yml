@@ -41,6 +41,9 @@ jobs:
       - name: Get version
         run: ollama --version
 
+      - name: Show help
+        run: ollama --help
+
   # action should work on a clean machine without building
   integration:
     runs-on: ${{ matrix.os }}
