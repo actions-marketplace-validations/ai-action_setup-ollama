@@ -25,10 +25,16 @@ jobs:
 
 ## Usage
 
-Set up Ollama CLI and start server:
+Install the Ollama CLI and start the server:
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
+```
+
+Then you can run a prompt against a [model](https://ollama.com/library):
+
+```yaml
+- run: ollama run tinyllama "What's a large language model?"
 ```
 
 See [action.yml](action.yml).
