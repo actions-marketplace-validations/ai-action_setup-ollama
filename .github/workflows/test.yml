@@ -37,6 +37,9 @@ jobs:
 
       - name: Run action
         uses: ./
+        with:
+          version: ''
+          name: ''
 
       - name: Get version
         run: ollama --version
