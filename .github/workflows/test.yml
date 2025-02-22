@@ -65,13 +65,12 @@ jobs:
       - name: Check version
         shell: bash
         run: |
-          ollama-cli --version &> CLI_VERSION
-          if [[ $(cat CLI_VERSION) != *'${{ matrix.version }}'* ]]; then
+          CLI_VERSION=$(ollama-cli --version)
+          if [[ $CLI_VERSION != *'${{ matrix.version }}'* ]]; then
             echo 'Version does not match. See version below:'
             ollama-cli --version
             exit 1
           fi
 
       - name: Run LLM
-        if: matrix.os != 'macos-latest'
-        run: ollama-cli run llama3.2 'Explain the basics of machine learning.'
+        run: ollama-cli run tinyllama 'Explain the basics of machine learning.'
