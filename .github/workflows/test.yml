@@ -71,8 +71,7 @@ jobs:
       - name: Check version
         shell: bash
         run: |
-          CLI_VERSION=$(ollama-cli --version)
-          if [[ $CLI_VERSION != *'${{ matrix.version }}'* ]]; then
+          if [[ "$(ollama-cli --version)" != *'${{ matrix.version }}'* ]]; then
             echo 'Version does not match. See version below:'
             ollama-cli --version
             exit 1
