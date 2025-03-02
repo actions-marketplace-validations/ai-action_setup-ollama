@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="ollama" height="200px" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
+</p>
+
 # setup-ollama
 
 [![action](https://badgen.net/badge/github/setup-ollama?icon&label)](https://github.com/marketplace/actions/setup-ollama)
