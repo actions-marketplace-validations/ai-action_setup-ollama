@@ -10,6 +10,7 @@
 ## Quick Start
 
 ```yaml
+# .github/workflows/ollama.yml
 name: ollama
 on: push
 jobs:
