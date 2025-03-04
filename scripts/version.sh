@@ -10,13 +10,13 @@ LATEST_VERSION=$(
     --limit 1 \
     --exclude-pre-releases \
     --json name \
-    --jq '.[0].name' \
-    | cut -c2-
+    --jq '.[0].name' | \
+  cut -c2-
 )
 
 echo "Latest version: $LATEST_VERSION"
 
-if [[ $ACTION_VERSION == $LATEST_VERSION ]]; then
+if [[ $CURRENT_VERSION == $LATEST_VERSION ]]; then
   echo "Ollama version has not changed. Exiting"
   exit
 fi
