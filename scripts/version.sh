@@ -32,10 +32,10 @@ else
 fi
 
 echo 'Creating PR'
-BRANCH='feat/version'
+BRANCH="feat/version-$LATEST_VERSION"
 git checkout -b $BRANCH
 git commit -am "feat(action): bump ollama version from $CURRENT_VERSION to $LATEST_VERSION"
-git push origin $BRANCH
+git push --force origin $BRANCH
 gh pr create --assignee remarkablemark --fill --reviewer remarkablemark
 
 git stash pop
