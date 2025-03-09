@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   version:
@@ -33,7 +32,7 @@ jobs:
       - name: Build artifact
         run: npm run build
 
-      - name: Check version
+      - name: Update version
         run: scripts/version.sh
         env:
           GH_TOKEN: ${{ github.token }}
