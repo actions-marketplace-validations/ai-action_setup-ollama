@@ -42,6 +42,17 @@ Run a prompt against a [model](https://ollama.com/library):
 - run: ollama run tinyllama "What's a large language model?"
 ```
 
+Cache the model to speed up CI:
+
+```yaml
+- uses: actions/cache@v4
+  with:
+    path: ~/.ollama
+    key: ${{ runner.os }}-ollama
+
+- run: ollama run tinyllama 'Define cache'
+```
+
 See [action.yml](action.yml).
 
 ## Inputs
