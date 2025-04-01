@@ -31,11 +31,12 @@ else
   echo "$FILES" | xargs sed -i -e "s/$CURRENT_VERSION/$LATEST_VERSION/g"
 fi
 
+npm run build
+
 echo 'Creating PR'
 BRANCH="feat/version-$LATEST_VERSION"
 git checkout -b $BRANCH
-git add .
-git commit -m "feat(action): bump Ollama version from $CURRENT_VERSION to $LATEST_VERSION" -m "https://github.com/ollama/ollama/releases/tag/v$LATEST_VERSION"
+git commit -am "feat(action): bump Ollama version from $CURRENT_VERSION to $LATEST_VERSION" -m "https://github.com/ollama/ollama/releases/tag/v$LATEST_VERSION"
 git push --force origin $BRANCH
 gh pr create --assignee remarkablemark --fill --reviewer remarkablemark
 
