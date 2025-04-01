@@ -23,7 +23,7 @@ fi
 
 git stash
 
-FILES=$(git grep -l "$CURRENT_VERSION" -- ':!CHANGELOG.md')
+FILES=$(git grep -l "$CURRENT_VERSION" -- ':!CHANGELOG.md' ':!package*.json')
 
 if [[ $(uname) == 'Darwin' ]]; then
   echo "$FILES" | xargs sed -i '' -e "s/$CURRENT_VERSION/$LATEST_VERSION/g"
@@ -33,10 +33,13 @@ fi
 
 npm run build
 
-echo 'Creating PR'
+echo 'Creating PR...'
 BRANCH="feat/version-$LATEST_VERSION"
 git checkout -b $BRANCH
-git commit -am "feat(action): bump Ollama version from $CURRENT_VERSION to $LATEST_VERSION" -m "https://github.com/ollama/ollama/releases/tag/v$LATEST_VERSION"
+git commit -am \
+  "build(deps): bump ollama from $CURRENT_VERSION to $LATEST_VERSION" \
+  -m "Release-As: $(jq -r .version package.json | awk -F. '/[0-9]+\./{$NF++;print}' OFS=.)" \
+  -m "https://github.com/ollama/ollama/releases/tag/v$LATEST_VERSION"
 git push --force origin $BRANCH
 gh pr create --assignee remarkablemark --fill --reviewer remarkablemark
 
