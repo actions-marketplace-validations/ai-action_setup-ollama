@@ -12,7 +12,7 @@ import path from 'path';
 
 import { getBinaryPath, getDownloadObject } from './utils';
 
-const DEFAULT_VERSION = '0.6.6';
+const DEFAULT_VERSION = '0.6.7';
 const DEFAULT_NAME = 'ollama';
 
 export async function run() {
