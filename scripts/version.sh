@@ -34,7 +34,7 @@ fi
 npm run build
 
 echo 'Creating PR...'
-BRANCH="feat/version-$LATEST_VERSION"
+BRANCH="build/version-$LATEST_VERSION"
 git checkout -b $BRANCH
 git commit -am \
   "build(deps): bump ollama from $CURRENT_VERSION to $LATEST_VERSION" \
