@@ -12,13 +12,12 @@ import path from 'path';
 
 import { getBinaryPath, getDownloadObject } from './utils';
 
-const DEFAULT_VERSION = '0.9.0';
 const DEFAULT_NAME = 'ollama';
 
 export async function run() {
   try {
     // Get the version and name of the tool to be installed
-    const cliVersion = getInput('version') || DEFAULT_VERSION;
+    const cliVersion = getInput('version');
     const cliName = getInput('name') || DEFAULT_NAME;
     const toolName = cliName;
 
