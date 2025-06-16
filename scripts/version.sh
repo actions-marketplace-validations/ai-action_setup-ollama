@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e -u -o pipefail
+
 CURRENT_VERSION=$(yq .inputs.version.default action.yml)
 
 echo "Current version: $CURRENT_VERSION"
