@@ -52,7 +52,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        version: [0.5.13, 0.9.5]
+        version: [0.5.13, 0.9.4]
 
     steps:
       - name: Checkout repository
