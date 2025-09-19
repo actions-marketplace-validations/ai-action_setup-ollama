@@ -26,11 +26,12 @@ const cliName = 'cli-name';
 const cliVersion = '1.2.3';
 const pathToTarball = 'path/to/tarball';
 const pathToCLI = 'path/to/cli';
+const platforms = ['darwin', 'win32', 'linux'];
 
-describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
+describe.each(platforms)('when platform is %p', (platform) => {
   beforeEach(() => {
-    mockedOs.platform.mockReturnValueOnce(os as NodeJS.Platform);
-    mockedOs.arch.mockReturnValueOnce('arm64');
+    mockedOs.platform.mockReturnValue(platform as NodeJS.Platform);
+    mockedOs.arch.mockReturnValue('arm64');
 
     mockedCore.getInput.mockImplementation((input) => {
       switch (input) {
@@ -39,17 +40,20 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
         case 'name':
           return cliName;
         default:
-          throw Error(`Invalid input: ${input}`);
+          // eslint-disable-next-line no-console
+          console.error(`Invalid input: ${input}`);
+          return '';
       }
     });
   });
 
-  const binPath = os === 'linux' ? `${pathToCLI}/bin` : pathToCLI;
+  const binPath = platform === 'linux' ? `${pathToCLI}/bin` : pathToCLI;
   const cliPath = `${binPath}/${cliName}`;
 
   it('downloads, extracts, and adds CLI to PATH', async () => {
     mockedTc.downloadTool.mockResolvedValueOnce(pathToTarball);
-    const extract = os === 'win32' ? mockedTc.extractZip : mockedTc.extractTar;
+    const isWin32 = platform === 'win32';
+    const extract = isWin32 ? mockedTc.extractZip : mockedTc.extractTar;
     extract.mockResolvedValueOnce(pathToCLI);
     const unref = jest.fn();
     mockedSpawn.mockReturnValueOnce({ unref } as unknown as ChildProcess);
@@ -62,14 +66,15 @@ describe.each(['darwin', 'win32', 'linux'])('when OS is %p', (os) => {
 
     expect(extract).toHaveBeenCalledWith(pathToTarball);
 
+    const extension = isWin32 ? '.exe' : '';
     expect(mockedExec.exec).toHaveBeenCalledWith('mv', [
-      `${binPath}/ollama`,
-      cliPath,
+      `${binPath}/ollama${extension}`,
+      cliPath + extension,
     ]);
 
     expect(mockedTc.cacheFile).toHaveBeenCalledWith(
-      cliPath,
-      cliName,
+      cliPath + extension,
+      cliName + extension,
       cliName,
       cliVersion,
     );

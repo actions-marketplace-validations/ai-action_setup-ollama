@@ -12,17 +12,16 @@ import path from 'path';
 
 import { getBinaryPath, getDownloadObject } from './utils';
 
-const DEFAULT_NAME = 'ollama';
+const TOOL_NAME = 'ollama';
 
 export async function run() {
   try {
     // Get the version and name of the tool to be installed
     const cliVersion = getInput('version');
-    const cliName = getInput('name') || DEFAULT_NAME;
-    const toolName = cliName;
+    const cliName = getInput('name');
 
     // Find previously cached directory (if applicable)
-    let binaryPath = find(toolName, cliVersion);
+    let binaryPath = find(cliName, cliVersion);
     const isCached = Boolean(binaryPath);
 
     /* istanbul ignore else */
@@ -44,9 +43,9 @@ export async function run() {
 
       // Rename the binary
       /* istanbul ignore else */
-      if (cliName !== DEFAULT_NAME) {
+      if (cliName !== TOOL_NAME) {
         await exec('mv', [
-          getBinaryPath(binaryDirectory, DEFAULT_NAME),
+          getBinaryPath(binaryDirectory, TOOL_NAME),
           binaryPath,
         ]);
       }
@@ -65,7 +64,8 @@ export async function run() {
     // Cache the tool
     /* istanbul ignore else */
     if (!isCached) {
-      await cacheFile(binaryPath, cliName, toolName, cliVersion);
+      const filename = getBinaryPath('', cliName);
+      await cacheFile(binaryPath, filename, cliName, cliVersion);
     }
   } catch (error) {
     if (error instanceof Error) {
