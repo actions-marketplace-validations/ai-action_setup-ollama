@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.27](https://github.com/ai-action/setup-ollama/compare/v1.2.26...v1.2.27) (2025-09-19)
+
+
+### Bug Fixes
+
+* fix cached executable filename on windows ([f822276](https://github.com/ai-action/setup-ollama/commit/f8222762f17ab2ceac7fb9926167c0db2b66497d))
+
 ## [1.2.26](https://github.com/ai-action/setup-ollama/compare/v1.2.25...v1.2.26) (2025-09-16)
 
 
