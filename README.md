@@ -1,11 +1,10 @@
 <p align="center">
-  <img alt="ollama" height="200px" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
+  <img alt="Ollama" height="200" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
 </p>
 
 # setup-ollama
 
-[![action](https://badgen.net/badge/github/setup-ollama?icon&label)](https://github.com/marketplace/actions/setup-ollama)
-[![version](https://badgen.net/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
+[![version](https://img.shields.io/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
 [![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=AB3XFS8HYL)](https://codecov.io/gh/ai-action/setup-ollama)
 
