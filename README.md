@@ -1,11 +1,10 @@
 <p align="center">
-  <img alt="ollama" height="200px" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
+  <img alt="Ollama" height="200" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
 </p>
 
 # setup-ollama
 
-[![action](https://badgen.net/badge/github/setup-ollama?icon&label)](https://github.com/marketplace/actions/setup-ollama)
-[![version](https://badgen.net/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
+[![version](https://img.shields.io/github/release/ai-action/setup-ollama)](https://github.com/ai-action/setup-ollama/releases)
 [![build](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/setup-ollama/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/ai-action/setup-ollama/graph/badge.svg?token=AB3XFS8HYL)](https://codecov.io/gh/ai-action/setup-ollama)
 
@@ -59,12 +58,12 @@ See [action.yml](action.yml).
 
 ### `version`
 
-**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.7.0`](https://github.com/ollama/ollama/releases/tag/v0.7.0):
+**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.13.1`](https://github.com/ollama/ollama/releases/tag/v0.13.1):
 
 ```yaml
 - uses: ai-action/setup-ollama@v1
   with:
-    version: 0.7.0
+    version: 0.13.1
 ```
 
 ### `name`

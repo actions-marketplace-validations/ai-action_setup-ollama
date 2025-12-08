@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e -u -o pipefail
+
 CURRENT_VERSION=$(yq .inputs.version.default action.yml)
 
 echo "Current version: $CURRENT_VERSION"
@@ -23,7 +25,7 @@ fi
 
 git stash
 
-FILES=$(git grep -l "$CURRENT_VERSION" -- ':!CHANGELOG.md' ':!package*.json')
+FILES=$(git grep -l "$CURRENT_VERSION" -- ':!.github' ':!CHANGELOG.md' ':!package*.json')
 
 if [[ $(uname) == 'Darwin' ]]; then
   echo "$FILES" | xargs sed -i '' -e "s/$CURRENT_VERSION/$LATEST_VERSION/g"
@@ -34,7 +36,7 @@ fi
 npm run build
 
 echo 'Creating PR...'
-BRANCH="feat/version-$LATEST_VERSION"
+BRANCH="build/version-$LATEST_VERSION"
 git checkout -b $BRANCH
 git commit -am \
   "build(deps): bump ollama from $CURRENT_VERSION to $LATEST_VERSION" \
