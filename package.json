@@ -1,6 +1,6 @@
 {
   "name": "setup-ollama",
-  "version": "1.2.40",
+  "version": "1.2.42",
   "description": "Set up GitHub Actions workflow with Ollama",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "src/index.ts",
@@ -41,7 +41,7 @@
     "ts-jest": "29.4.6",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.49.0"
+    "typescript-eslint": "8.50.0"
   },
   "private": true,
   "license": "MIT"
