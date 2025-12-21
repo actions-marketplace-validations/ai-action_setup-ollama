@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/ai-action/setup-ollama/compare/v1.2.44...v2.0.0) (2025-12-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **action:** bump Node.js runtime from 20 to 24
+
+### Build System
+
+* **action:** update runtime from node20 to node24 ([c9b8513](https://github.com/ai-action/setup-ollama/commit/c9b8513534d122a4810356ff661895b1cfdbbd2a)), closes [#305](https://github.com/ai-action/setup-ollama/issues/305)
+* **deps:** bump @actions/core from 1.11.1 to 2.0.1 ([#336](https://github.com/ai-action/setup-ollama/issues/336)) ([636f5c1](https://github.com/ai-action/setup-ollama/commit/636f5c149aa29ead194d355c77bd69ec4ff20a67))
+
 ## [1.2.44](https://github.com/ai-action/setup-ollama/compare/v1.2.43...v1.2.44) (2025-12-19)
 
 
