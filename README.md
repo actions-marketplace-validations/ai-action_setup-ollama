@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Ollama
-        uses: ai-action/setup-ollama@v1
+        uses: ai-action/setup-ollama@v2
 
       - name: Run LLM
         run: ollama run llama3.2 'Explain the basics of machine learning.'
@@ -32,7 +32,7 @@ jobs:
 Install Ollama:
 
 ```yaml
-- uses: ai-action/setup-ollama@v1
+- uses: ai-action/setup-ollama@v2
 ```
 
 Run a prompt against a [model](https://ollama.com/library):
@@ -44,7 +44,7 @@ Run a prompt against a [model](https://ollama.com/library):
 Cache the model to speed up CI:
 
 ```yaml
-- uses: actions/cache@v4
+- uses: actions/cache@v5
   with:
     path: ~/.ollama
     key: ${{ runner.os }}-ollama
@@ -61,7 +61,7 @@ See [action.yml](action.yml).
 **Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.13.5`](https://github.com/ollama/ollama/releases/tag/v0.13.5):
 
 ```yaml
-- uses: ai-action/setup-ollama@v1
+- uses: ai-action/setup-ollama@v2
   with:
     version: 0.13.5
 ```
@@ -71,7 +71,7 @@ See [action.yml](action.yml).
 **Optional**: The CLI name. Defaults to `ollama`:
 
 ```yaml
-- uses: ai-action/setup-ollama@v1
+- uses: ai-action/setup-ollama@v2
   with:
     name: ollama
 ```
