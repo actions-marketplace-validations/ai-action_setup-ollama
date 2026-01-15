@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.2](https://github.com/ai-action/setup-ollama/compare/v2.0.1...v2.0.2) (2026-01-15)
+
+
+### Bug Fixes
+
+* **utils:** use .zst extension for linux version &gt;=0.14.0 ([#367](https://github.com/ai-action/setup-ollama/issues/367)) ([9b8d58b](https://github.com/ai-action/setup-ollama/commit/9b8d58bd5e7eb1b9bcd9c29aabfb04d9c5a61c67))
+
+
+### Build System
+
+* **deps:** bump ollama from 0.13.5 to 0.14.1 ([b5ba252](https://github.com/ai-action/setup-ollama/commit/b5ba2520db6e6f5a02c40f0b95e907e2f48bad52))
+
 ## [2.0.1](https://github.com/ai-action/setup-ollama/compare/v2.0.0...v2.0.1) (2026-01-09)
 
 
