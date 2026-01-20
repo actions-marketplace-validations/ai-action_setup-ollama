@@ -1,6 +1,6 @@
 {
   "name": "setup-ollama",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Set up GitHub Actions workflow with Ollama",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "src/index.ts",
@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@actions/core": "2.0.2",
-    "@actions/tool-cache": "3.0.0"
+    "@actions/tool-cache": "3.0.0",
+    "semver": "7.7.3"
   },
   "devDependencies": {
     "@commitlint/cli": "20.3.1",
@@ -27,21 +28,22 @@
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "9.39.2",
     "@types/jest": "30.0.0",
-    "@types/node": "25.0.7",
+    "@types/node": "25.0.9",
+    "@types/semver": "7.7.1",
     "@vercel/ncc": "0.38.4",
     "eslint": "9.39.2",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-tsdoc": "0.5.0",
     "globals": "17.0.0",
     "husky": "9.1.7",
     "jest": "30.2.0",
     "lint-staged": "16.2.7",
-    "prettier": "3.7.4",
+    "prettier": "3.8.0",
     "ts-jest": "29.4.6",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.53.0"
+    "typescript-eslint": "8.53.1"
   },
   "private": true,
   "license": "MIT"
