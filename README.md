@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Ollama" height="200" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
+  <img alt="Ollama" height="200" src="https://github.com/ai-action/assets/blob/master/logos/ollama.svg?raw=true">
 </p>
 
 # setup-ollama
@@ -58,12 +58,12 @@ See [action.yml](action.yml).
 
 ### `version`
 
-**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.14.2`](https://github.com/ollama/ollama/releases/tag/v0.14.2):
+**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.15.5`](https://github.com/ollama/ollama/releases/tag/v0.15.5):
 
 ```yaml
 - uses: ai-action/setup-ollama@v2
   with:
-    version: 0.14.2
+    version: 0.15.5
 ```
 
 ### `name`
