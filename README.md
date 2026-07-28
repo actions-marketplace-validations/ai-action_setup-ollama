@@ -23,8 +23,8 @@ jobs:
       - name: Setup Ollama
         uses: ai-action/setup-ollama@v2
 
-      - name: Run LLM
-        run: ollama run llama3.2 'Explain the basics of machine learning.'
+      - name: Run model
+        run: ollama run gemma4:e2b 'What model are you?'
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Install Ollama:
 Run a prompt against a [model](https://ollama.com/library):
 
 ```yaml
-- run: ollama run tinyllama "What's a large language model?"
+- run: ollama run gemma4 "What's a large language model?"
 ```
 
 Cache the model to speed up CI:
@@ -49,7 +49,7 @@ Cache the model to speed up CI:
     path: ~/.ollama
     key: ${{ runner.os }}-ollama
 
-- run: ollama run tinyllama 'Define cache'
+- run: ollama run gemma4 'Define cache'
 ```
 
 See [action.yml](action.yml).
@@ -58,12 +58,12 @@ See [action.yml](action.yml).
 
 ### `version`
 
-**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.15.5`](https://github.com/ollama/ollama/releases/tag/v0.15.5):
+**Optional**: The CLI [version](https://github.com/ollama/ollama/releases). Defaults to [`0.32.5`](https://github.com/ollama/ollama/releases/tag/v0.32.5):
 
 ```yaml
 - uses: ai-action/setup-ollama@v2
   with:
-    version: 0.15.5
+    version: 0.32.5
 ```
 
 ### `name`
@@ -75,6 +75,36 @@ See [action.yml](action.yml).
   with:
     name: ollama
 ```
+
+## FAQ
+
+### zstd: Cannot exec: No such file or directory
+
+If you get the error on a Linux self-hosted runner:
+
+```
+tar (child): zstd: Cannot exec: No such file or directory
+tar (child): Error is not recoverable: exiting now
+```
+
+It means that [zstd](https://github.com/facebook/zstd) is not installed.
+
+To fix this error, you can install `zstd`:
+
+```yaml
+- name: Install zstd
+  run: apt-get update && apt-get install zstd
+```
+
+Or use Ollama version <[0.14.0](https://github.com/ollama/ollama/releases/tag/v0.14.0):
+
+```yaml
+- uses: ai-action/setup-ollama@v2
+  with:
+    version: 0.13.5
+```
+
+See [#423](https://github.com/ai-action/setup-ollama/issues/423).
 
 ## License
 

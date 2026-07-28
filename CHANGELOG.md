@@ -1,5 +1,390 @@
 # Changelog
 
+## [2.0.65](https://github.com/ai-action/setup-ollama/compare/v2.0.64...v2.0.65) (2026-07-28)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.32.4 to 0.32.5 ([c31e1a5](https://github.com/ai-action/setup-ollama/commit/c31e1a56233b4b28e801954c43c16db1ae4343f0))
+
+## [2.0.64](https://github.com/ai-action/setup-ollama/compare/v2.0.63...v2.0.64) (2026-07-26)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.32.3 to 0.32.4 ([c91759f](https://github.com/ai-action/setup-ollama/commit/c91759f0724887d7c4a67279210b3fe67fa82ada))
+
+## [2.0.63](https://github.com/ai-action/setup-ollama/compare/v2.0.62...v2.0.63) (2026-07-24)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.32.1 to 0.32.3 ([85937ef](https://github.com/ai-action/setup-ollama/commit/85937ef43626ded9840d6e5fd0cc6bd9f2114838))
+
+## [2.0.62](https://github.com/ai-action/setup-ollama/compare/v2.0.61...v2.0.62) (2026-07-17)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.32.0 to 0.32.1 ([1a0923b](https://github.com/ai-action/setup-ollama/commit/1a0923b46c5fa8edb590ea66c27f43c911f715e5))
+
+## [2.0.61](https://github.com/ai-action/setup-ollama/compare/v2.0.60...v2.0.61) (2026-07-14)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.31.2 to 0.32.0 ([ea8e761](https://github.com/ai-action/setup-ollama/commit/ea8e761690c363ea46c2274187a84daa85ec6d7f))
+
+## [2.0.60](https://github.com/ai-action/setup-ollama/compare/v2.0.59...v2.0.60) (2026-07-09)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.31.1 to 0.31.2 ([f467cff](https://github.com/ai-action/setup-ollama/commit/f467cff8aad85563b3a602dec59de1a498c5f11f))
+
+## [2.0.59](https://github.com/ai-action/setup-ollama/compare/v2.0.58...v2.0.59) (2026-07-01)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.11 to 0.31.1 ([a8559f9](https://github.com/ai-action/setup-ollama/commit/a8559f9371d74b88b8be0add4c48a23744e8d4dc))
+
+## [2.0.58](https://github.com/ai-action/setup-ollama/compare/v2.0.57...v2.0.58) (2026-06-27)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.10 to 0.30.11 ([eb0f68d](https://github.com/ai-action/setup-ollama/commit/eb0f68d956f8581b825c8370d983314763f02402))
+
+## [2.0.57](https://github.com/ai-action/setup-ollama/compare/v2.0.56...v2.0.57) (2026-06-22)
+
+
+### Build System
+
+* **deps:** bump semver from 7.8.4 to 7.8.5 ([#602](https://github.com/ai-action/setup-ollama/issues/602)) ([8828d46](https://github.com/ai-action/setup-ollama/commit/8828d46de25a6b38ea30bcd66ada85e417d693d9))
+
+## [2.0.56](https://github.com/ai-action/setup-ollama/compare/v2.0.55...v2.0.56) (2026-06-19)
+
+
+### Build System
+
+* **deps:** bump undici from 6.26.0 to 6.27.0 ([#599](https://github.com/ai-action/setup-ollama/issues/599)) ([65df6f4](https://github.com/ai-action/setup-ollama/commit/65df6f4c71a505507dbd170c84d808ee2ebe86fb))
+
+## [2.0.55](https://github.com/ai-action/setup-ollama/compare/v2.0.54...v2.0.55) (2026-06-18)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.9 to 0.30.10 ([990a789](https://github.com/ai-action/setup-ollama/commit/990a789f4e357205df6840f546e308d22bd0a4fc))
+
+## [2.0.54](https://github.com/ai-action/setup-ollama/compare/v2.0.53...v2.0.54) (2026-06-17)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.8 to 0.30.9 ([44da843](https://github.com/ai-action/setup-ollama/commit/44da843f68995db555cefbaca936d726a728b37f))
+
+## [2.0.53](https://github.com/ai-action/setup-ollama/compare/v2.0.52...v2.0.53) (2026-06-13)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.7 to 0.30.8 ([87cde7e](https://github.com/ai-action/setup-ollama/commit/87cde7e87ef7aa26a83620f1af12f1572b8d04eb))
+
+## [2.0.52](https://github.com/ai-action/setup-ollama/compare/v2.0.51...v2.0.52) (2026-06-09)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.6 to 0.30.7 ([ec4ff45](https://github.com/ai-action/setup-ollama/commit/ec4ff459a3bb396df9e29b4314fc79e3ad630654))
+
+## [2.0.51](https://github.com/ai-action/setup-ollama/compare/v2.0.50...v2.0.51) (2026-06-06)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.5 to 0.30.6 ([6406b18](https://github.com/ai-action/setup-ollama/commit/6406b1813d9b883954cc104ff93001bd2bee36a5))
+
+## [2.0.50](https://github.com/ai-action/setup-ollama/compare/v2.0.49...v2.0.50) (2026-06-05)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.4 to 0.30.5 ([4eb6981](https://github.com/ai-action/setup-ollama/commit/4eb6981f070404f0ce11a30a64bf709ad0898e62))
+
+## [2.0.49](https://github.com/ai-action/setup-ollama/compare/v2.0.48...v2.0.49) (2026-06-04)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.2 to 0.30.4 ([3727070](https://github.com/ai-action/setup-ollama/commit/3727070d08822d8c9b117042339e1522185bb174))
+
+## [2.0.48](https://github.com/ai-action/setup-ollama/compare/v2.0.47...v2.0.48) (2026-06-03)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.30.0 to 0.30.2 ([c106ef0](https://github.com/ai-action/setup-ollama/commit/c106ef07ec3e8d9062efc7424c0d054976727965))
+
+## [2.0.47](https://github.com/ai-action/setup-ollama/compare/v2.0.46...v2.0.47) (2026-06-02)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.24.0 to 0.30.0 ([748ffe3](https://github.com/ai-action/setup-ollama/commit/748ffe310408ec1197f7097968a63729e5bdf306))
+
+## [2.0.46](https://github.com/ai-action/setup-ollama/compare/v2.0.45...v2.0.46) (2026-05-22)
+
+
+### Build System
+
+* **deps:** bump semver from 7.8.0 to 7.8.1 ([#558](https://github.com/ai-action/setup-ollama/issues/558)) ([63dd6a3](https://github.com/ai-action/setup-ollama/commit/63dd6a3db369ed83ba2e65a684420a98feed9f21))
+
+## [2.0.45](https://github.com/ai-action/setup-ollama/compare/v2.0.44...v2.0.45) (2026-05-15)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.23.4 to 0.24.0 ([6005f0c](https://github.com/ai-action/setup-ollama/commit/6005f0cbe89e7432df5674016d8941007fdcb1e2))
+
+## [2.0.44](https://github.com/ai-action/setup-ollama/compare/v2.0.43...v2.0.44) (2026-05-14)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.23.3 to 0.23.4 ([da161dc](https://github.com/ai-action/setup-ollama/commit/da161dc90df23bdf9f7d1db234b8440c29e8251a))
+
+## [2.0.43](https://github.com/ai-action/setup-ollama/compare/v2.0.42...v2.0.43) (2026-05-13)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.23.2 to 0.23.3 ([7f21fb3](https://github.com/ai-action/setup-ollama/commit/7f21fb3654ba4c75c77b5ebce667e875e4167966))
+
+## [2.0.42](https://github.com/ai-action/setup-ollama/compare/v2.0.41...v2.0.42) (2026-05-12)
+
+
+### Build System
+
+* **deps:** bump semver from 7.7.4 to 7.8.0 ([#540](https://github.com/ai-action/setup-ollama/issues/540)) ([5ff57e8](https://github.com/ai-action/setup-ollama/commit/5ff57e80907a3700a347cb19823009e1d33be334))
+
+## [2.0.41](https://github.com/ai-action/setup-ollama/compare/v2.0.40...v2.0.41) (2026-05-08)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.23.1 to 0.23.2 ([e89c3b4](https://github.com/ai-action/setup-ollama/commit/e89c3b422df02cba2720d04fa2abaaf9dc925fc9))
+
+## [2.0.40](https://github.com/ai-action/setup-ollama/compare/v2.0.39...v2.0.40) (2026-05-06)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.23.0 to 0.23.1 ([8622a0a](https://github.com/ai-action/setup-ollama/commit/8622a0af02ed0043ce25d3da65ca37792baddaf1))
+
+## [2.0.39](https://github.com/ai-action/setup-ollama/compare/v2.0.38...v2.0.39) (2026-05-04)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.22.1 to 0.23.0 ([6bb4c02](https://github.com/ai-action/setup-ollama/commit/6bb4c023cca8c8528af79eb6bb4e2e3ebe7b8b63))
+
+## [2.0.38](https://github.com/ai-action/setup-ollama/compare/v2.0.37...v2.0.38) (2026-05-01)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.22.0 to 0.22.1 ([197c08e](https://github.com/ai-action/setup-ollama/commit/197c08ef4810539f2a6295b2bbfd4a4c3a38ce1b))
+
+## [2.0.37](https://github.com/ai-action/setup-ollama/compare/v2.0.36...v2.0.37) (2026-04-29)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.21.2 to 0.22.0 ([c76b62e](https://github.com/ai-action/setup-ollama/commit/c76b62e667bc194fd8c263729b1847f9b0dc7180))
+
+## [2.0.36](https://github.com/ai-action/setup-ollama/compare/v2.0.35...v2.0.36) (2026-04-25)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.21.1 to 0.21.2 ([f7e75e9](https://github.com/ai-action/setup-ollama/commit/f7e75e9bb20a258e8f5a95749ec8d8d8b1face35))
+
+## [2.0.35](https://github.com/ai-action/setup-ollama/compare/v2.0.34...v2.0.35) (2026-04-24)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.21.0 to 0.21.1 ([af9df67](https://github.com/ai-action/setup-ollama/commit/af9df67dd0080ecac7f78d9647fe678c0dc503db))
+
+## [2.0.34](https://github.com/ai-action/setup-ollama/compare/v2.0.33...v2.0.34) (2026-04-18)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.7 to 0.21.0 ([7a53d34](https://github.com/ai-action/setup-ollama/commit/7a53d34e0dbfc3992b42d3b3fbfbec3373966266))
+
+## [2.0.33](https://github.com/ai-action/setup-ollama/compare/v2.0.32...v2.0.33) (2026-04-14)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.6 to 0.20.7 ([d1303b2](https://github.com/ai-action/setup-ollama/commit/d1303b24c520c76f78b89ccacf4e5534eb1eafb3))
+
+## [2.0.32](https://github.com/ai-action/setup-ollama/compare/v2.0.31...v2.0.32) (2026-04-13)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.5 to 0.20.6 ([fcff366](https://github.com/ai-action/setup-ollama/commit/fcff36671a7294bf72fbb00945f7a88932a290b4))
+
+## [2.0.31](https://github.com/ai-action/setup-ollama/compare/v2.0.30...v2.0.31) (2026-04-11)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.4 to 0.20.5 ([386b363](https://github.com/ai-action/setup-ollama/commit/386b36316df76e2d7245fab35e5262fb3a492fea))
+
+## [2.0.30](https://github.com/ai-action/setup-ollama/compare/v2.0.29...v2.0.30) (2026-04-09)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.3 to 0.20.4 ([ceb4d68](https://github.com/ai-action/setup-ollama/commit/ceb4d68e858cc8241446c87c871efa360578b610))
+
+## [2.0.29](https://github.com/ai-action/setup-ollama/compare/v2.0.28...v2.0.29) (2026-04-08)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.2 to 0.20.3 ([76543d8](https://github.com/ai-action/setup-ollama/commit/76543d89a76f53dd9c0dd88d84c787dc0d7b5a17))
+
+## [2.0.28](https://github.com/ai-action/setup-ollama/compare/v2.0.27...v2.0.28) (2026-04-05)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.20.0 to 0.20.2 ([609ef25](https://github.com/ai-action/setup-ollama/commit/609ef25232050ac4cb6c7dcb5b1def2ba5971820))
+
+## [2.0.27](https://github.com/ai-action/setup-ollama/compare/v2.0.26...v2.0.27) (2026-04-03)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.19.0 to 0.20.0 ([2cf41ce](https://github.com/ai-action/setup-ollama/commit/2cf41ce696eab18621dca60e7826df084f16185b))
+
+## [2.0.26](https://github.com/ai-action/setup-ollama/compare/v2.0.25...v2.0.26) (2026-03-31)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.18.3 to 0.19.0 ([4b356c6](https://github.com/ai-action/setup-ollama/commit/4b356c660e0c2bba8cc0226536169ee3f98e4a54))
+
+## [2.0.25](https://github.com/ai-action/setup-ollama/compare/v2.0.24...v2.0.25) (2026-03-27)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.18.2 to 0.18.3 ([fc1d643](https://github.com/ai-action/setup-ollama/commit/fc1d6433cd50eb9b3ce2ade24f566781df1cd6ad))
+
+## [2.0.24](https://github.com/ai-action/setup-ollama/compare/v2.0.23...v2.0.24) (2026-03-19)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.18.1 to 0.18.2 ([1e9713e](https://github.com/ai-action/setup-ollama/commit/1e9713e1c05c1a36cdfbf712fd9f7ba08afa697a))
+
+## [2.0.23](https://github.com/ai-action/setup-ollama/compare/v2.0.22...v2.0.23) (2026-03-18)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.18.0 to 0.18.1 ([c365e86](https://github.com/ai-action/setup-ollama/commit/c365e86d33df553137f01ef6614f2aedd2008633))
+
+## [2.0.22](https://github.com/ai-action/setup-ollama/compare/v2.0.21...v2.0.22) (2026-03-15)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.7 to 0.18.0 ([8e74f73](https://github.com/ai-action/setup-ollama/commit/8e74f7322028eb84d77247511ab8d8a70bb50ac9))
+
+## [2.0.21](https://github.com/ai-action/setup-ollama/compare/v2.0.20...v2.0.21) (2026-03-14)
+
+
+### Build System
+
+* **deps:** bump undici from 6.23.0 to 6.24.0 ([#454](https://github.com/ai-action/setup-ollama/issues/454)) ([725f92c](https://github.com/ai-action/setup-ollama/commit/725f92c2bbd3ba46d4cfed3f863a9a2fcdf2c442))
+
+## [2.0.20](https://github.com/ai-action/setup-ollama/compare/v2.0.19...v2.0.20) (2026-03-07)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.6 to 0.17.7 ([8470570](https://github.com/ai-action/setup-ollama/commit/847057078f0c0adfd9f2b13d892ca764c1efcaec))
+
+## [2.0.19](https://github.com/ai-action/setup-ollama/compare/v2.0.18...v2.0.19) (2026-03-05)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.5 to 0.17.6 ([6db1e9e](https://github.com/ai-action/setup-ollama/commit/6db1e9e3ca1af987f2de82b12548b82b6643ee18))
+
+## [2.0.18](https://github.com/ai-action/setup-ollama/compare/v2.0.17...v2.0.18) (2026-03-03)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.4 to 0.17.5 ([0dbbf6d](https://github.com/ai-action/setup-ollama/commit/0dbbf6d60b85d0f903ac2298c94096da7b7503e7))
+
+## [2.0.17](https://github.com/ai-action/setup-ollama/compare/v2.0.16...v2.0.17) (2026-02-28)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.2 to 0.17.4 ([10824a2](https://github.com/ai-action/setup-ollama/commit/10824a2ac9ef95c9819e30b11ee008b1aceb2975))
+
+## [2.0.16](https://github.com/ai-action/setup-ollama/compare/v2.0.15...v2.0.16) (2026-02-27)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.17.0 to 0.17.2 ([ad2f1cb](https://github.com/ai-action/setup-ollama/commit/ad2f1cb922e25bfb0d2da98ad6fc07f03abc4b1f))
+
+## [2.0.15](https://github.com/ai-action/setup-ollama/compare/v2.0.14...v2.0.15) (2026-02-24)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.16.3 to 0.17.0 ([19c845c](https://github.com/ai-action/setup-ollama/commit/19c845cba2014005f3f8ad2e30c84917dbbdd63b))
+
+## [2.0.14](https://github.com/ai-action/setup-ollama/compare/v2.0.13...v2.0.14) (2026-02-21)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.16.2 to 0.16.3 ([f390eda](https://github.com/ai-action/setup-ollama/commit/f390eda2b91db5bd0cc493f703dd46af08c87a02))
+
+## [2.0.13](https://github.com/ai-action/setup-ollama/compare/v2.0.12...v2.0.13) (2026-02-17)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.16.1 to 0.16.2 ([ebe36d0](https://github.com/ai-action/setup-ollama/commit/ebe36d03b5a8c1a95c1621c3121a4d32e79a1833))
+
+## [2.0.12](https://github.com/ai-action/setup-ollama/compare/v2.0.11...v2.0.12) (2026-02-13)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.15.6 to 0.16.1 ([0bcf112](https://github.com/ai-action/setup-ollama/commit/0bcf1125e4d81e9e00023f5de8e021f022e2ffab))
+
+## [2.0.11](https://github.com/ai-action/setup-ollama/compare/v2.0.10...v2.0.11) (2026-02-09)
+
+
+### Build System
+
+* **deps:** bump ollama from 0.15.5 to 0.15.6 ([4bc6560](https://github.com/ai-action/setup-ollama/commit/4bc65603c4df39770d7bcb5c461d502682c5ff8b))
+
 ## [2.0.10](https://github.com/ai-action/setup-ollama/compare/v2.0.9...v2.0.10) (2026-02-07)
 
 

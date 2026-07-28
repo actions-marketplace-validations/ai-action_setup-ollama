@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 
-import { includeIgnoreFile } from '@eslint/compat';
+import { includeIgnoreFile } from '@eslint/config-helpers';
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-plugin-prettier';
@@ -28,12 +28,21 @@ export default defineConfig([
       tsdoc,
     },
 
-    extends: [eslint.configs.recommended, tseslint.configs.recommended],
+    extends: [
+      eslint.configs.recommended,
+      tseslint.configs.recommended,
+      tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+    ],
 
     languageOptions: {
+      parserOptions: {
+        project: ['tsconfig.json', 'tsconfig.test.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
       globals: {
         ...globals.node,
-        ...globals.jest,
       },
     },
 
